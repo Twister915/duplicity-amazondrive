@@ -18,6 +18,7 @@ On first usage you will need to open an URL in a browser and copy the resulting 
 ## Usage
 ```
 duplicity source_path amazondrive:///backup/my_new_backup
+ACD_OAUTH_PATH=/some/path/to/oauth_json_file.json duplicity source_path amazondrive:///backup/my_other_backup
 ```
 
 # License

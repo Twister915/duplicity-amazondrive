@@ -38,7 +38,7 @@ class AmazonDriveBackend(duplicity.backend.Backend):
     acd_cli).
     """
 
-    OAUTH_TOKEN_PATH = os.path.expanduser('~/.duplicity_amazondrive_oauthtoken.json')
+    OAUTH_TOKEN_PATH = os.getenv('ACD_OAUTH_PATH', os.path.expanduser('~/.duplicity_amazondrive_oauthtoken.json'))
 
     OAUTH_AUTHORIZE_URL = 'https://www.amazon.com/ap/oa'
     OAUTH_TOKEN_URL = 'https://api.amazon.com/auth/o2/token'
